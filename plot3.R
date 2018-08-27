@@ -12,7 +12,7 @@ png(filename = "plot3.png",width = 480,height=480,units = "px")
 cc1<-as.numeric(levels(my_data2$Sub_metering_1))[as.integer(my_data2$Sub_metering_1)]
 cc2<-as.numeric(levels(my_data2$Sub_metering_2))[as.integer(my_data2$Sub_metering_2)]
 
-plot(mytime,cc1, type="l", ylab ="Energy sub metering",col="black")
+plot(mytime,cc1, type="l", xlab="",ylab ="Energy sub metering",col="black")
 lines(mytime,cc2, col="red")
 lines(mytime,my_data2$Sub_metering_3, col="blue")
 legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))

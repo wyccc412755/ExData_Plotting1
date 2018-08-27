@@ -12,13 +12,13 @@ png(filename = "plot4.png",width = 480,height=480,units = "px")
 par(mfrow=c(2,2))
 
 plot(datetime,as.numeric(levels(my_data2$Global_active_power))[as.integer(my_data2$Global_active_power)], 
-     ylab ="Global Active Power",type="l")
+     xlab="",ylab ="Global Active Power",type="l")
 
 plot(datetime,as.numeric(levels(my_data2$Voltage))[as.integer(my_data2$Voltage)], 
      ylab ="Global Active Power",type="l")
 
 
-plot(datetime,cc1, type="l", ylab ="Energy sub metering",col="black")
+plot(datetime,cc1, type="l", xlab="",ylab ="Energy sub metering",col="black")
 lines(datetime,cc2, col="red")
 lines(datetime,my_data2$Sub_metering_3, col="blue")
 legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
